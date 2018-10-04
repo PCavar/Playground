@@ -36,3 +36,36 @@ function randomizeBackgroundPro() {
 
     console.log(red, green, blue);
 }
+
+function randomizeBackgroundHex() {
+    var red1 = convertToHex(Math.round(Math.random() *15));
+    var red2 = convertToHex(Math.round(Math.random() *15));
+    var green1 = convertToHex(Math.round(Math.random() *15));
+    var green2 = convertToHex(Math.round(Math.random() *15));
+    var blue1 = convertToHex(Math.round(Math.random() *15));
+    var blue2 = convertToHex(Math.round(Math.random() *15));
+
+    var rgbValue = "#" + red1 + red2 + green1 + green2 + blue1 + blue2
+    console.log(rgbValue);
+    document.body.style.backgroundColor = rgbValue;
+        
+}
+
+function convertToHex(value) { 
+    if (value == 10) {
+        return "A";
+    } else if (value == 11) {
+        return "B";
+    } else if (value == 12) {
+        return "C";
+    } else if (value == 13) {
+        return "D";
+    } else if (value == 14) {
+       return "E";
+    } else if (value == 15) {
+       return "F";
+    } else {
+        return value;
+    }
+
+}
