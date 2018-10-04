@@ -8,12 +8,31 @@ function changeBackground() {
 }
 
 
-function windowAlert() {
-    var text;
-    if (confirm("Press a button!")) {
-        text = "You pressed OK!";
-    } else {
-        text = "You pressed cancel!";
+function randomizeBackground() {
+    var randomValue = Math.random();
+    if (randomValue < 0.2) {
+        document.body.style.backgroundColor = "blue";
+    } else if ( randomValue < 0.4) {
+        document.body.style.backgroundColor = "pink";
+    } else if (randomValue < 0.6) {
+        document.body.style.backgroundColor = "red";
+    } else if (randomValue <0.8) {
+        document.body.style.backgroundColor = "orange";
+    }   else {
+        document.body.style.backgroundColor = "yellow";
     }
-    document.getElementById.alert1("alert");
+}
+
+function randomizeBackgroundPro() {
+
+    var red = Math.round(Math.random() * 255);
+    var green = Math.round(Math.random() * 255);
+    var blue = Math.round(Math.random() * 255);
+
+    var rgbValue = "rgb(" + red + "," + green + "," + blue +")";
+    document.body.style.backgroundColor = rgbValue;
+
+    setInterval(randomizeBackground, 1000);
+
+    console.log(red, green, blue);
 }
