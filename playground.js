@@ -69,3 +69,4 @@ function convertToHex(value) {
     }
 
 }
+
